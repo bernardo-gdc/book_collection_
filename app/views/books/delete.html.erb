@@ -3,6 +3,9 @@
 <p>Are you sure you want to delete this book?</p>
 <%= form_for(@book, method: "delete") do |f| %>
 <h2><%= @book.title %></h2>
+
+
+
 <%= f.submit("Delete Book")%>
 <% end %>
 
