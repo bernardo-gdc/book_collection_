@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  resources :user_books
+  resources :users
+  root 'user_books#index'
 
-root "books#index"
+# root "books#index"
 
   resources :books do
     member do
@@ -8,13 +11,4 @@ root "books#index"
     end
   end
 
-  # root "books#index"
-  # post 'books/create'
-  # get 'books/read'
-  # get 'books/update'
-  # get 'books/delete'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
 end
